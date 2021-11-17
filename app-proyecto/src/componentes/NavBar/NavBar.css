@@ -1,0 +1,27 @@
+.header {
+    height:15%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-color: black;
+    color: white;
+}
+ 
+#navegacion {
+    width:25%;
+}
+
+#navegacion li{
+    margin-left: 20px;
+    list-style: none;
+}
+
+#menu {
+    display:flex;
+}
+
+.App-logo {
+    margin-left: 2%;
+    width: 100px;
+    height: 100px;
+}

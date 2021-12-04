@@ -12,14 +12,6 @@ return (
     <header className="header">
         <img src={logo} className="App-logo" alt="logo" />
         
-        {/* <nav id="navegacion">
-            <ul id="menu">
-                <li>Enlace 1</li>
-                <li>Enlace 2</li>
-                <li>Enlace 3</li>
-            </ul>
-        </nav> */}
-
         <Navbar bg="black" expand="lg" variant="dark">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">

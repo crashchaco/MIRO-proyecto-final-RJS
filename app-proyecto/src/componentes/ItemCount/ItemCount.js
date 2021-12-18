@@ -3,20 +3,27 @@ import {Button} from 'react-bootstrap'
 import './ItemCount.css'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import {useEffect,useState} from 'react';
 
 export const ItemCount = ({stock, initial, onAdd}) => {
   
+  const [contador=initial, setContador] = React.useState(initial);
 
-const SwalError = withReactContent(Swal)
+  const Carrito = onAdd;
+  const SwalError = withReactContent(Swal)
 
 
-
+  console.log(contador);
   console.log(initial);
   console.log(stock);
 
-const [contador=initial, setContador] = React.useState(initial);
-const Carrito = onAdd;
-console.log(contador);
+
+  
+
+
+
+
+
 
 const agregarItem = () => {
   if (contador < stock) {
@@ -67,6 +74,7 @@ const agregarCarrito = () => {
   return (
 
     <div>
+    
     <h1>El contador va:{contador}</h1>
     <Button variant="warning" onClick={agregarItem}>Sumar Producto</Button>
     <Button variant="warning" onClick={restarItem}>Restar Producto</Button>

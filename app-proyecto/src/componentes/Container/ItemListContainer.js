@@ -12,6 +12,9 @@ export const ItemListContainer = ({greeting}) => {
     {id:'2', title:'COD 4', description:'Juegos de consolas', precio:'$30'},
     {id:'3', title:'CLASH ROYALE', description:'Juegos de dispositivos móviles', precio:'$40'}
 ];
+  const [productos, setProductos] = useState([])
+
+ 
 
   useEffect(() => {
 
@@ -28,12 +31,13 @@ export const ItemListContainer = ({greeting}) => {
      }
    })
    
-   console.log(promesa)
+  //  console.log(promesa)
 
    promesa
          .then((resultado) => {
            console.log(resultado)
            setMensaje("Todo salio bien")
+           setProductos(resultado)
          })
          .catch(() => {
            console.log("salio todo mal")
@@ -43,12 +47,19 @@ export const ItemListContainer = ({greeting}) => {
  },[])
 
 
-
+ console.log(productos)
 
   return (
 
     <div className="container">
       <h1>{mensaje}</h1>
+
+      <hr />
+      {productos.map((elemento,indice)=> {
+        return <p>{elemento.title}</p>
+      })}
+
+
       <h1>{greeting}</h1>
       <hr />
       <ItemCount stock={5} initial={0}/>

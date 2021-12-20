@@ -1,15 +1,12 @@
-import React from 'react';
-import './ItemDetailContainer.css'
+import React from 'react'
 
-export const ItemDetailContainer = () => {
-    
-
+const ItemDetailContainer = () => {
   return (
-
-    <div className="ItemDetalContainer">
-
+    <div>
+      
     </div>
   )
 }
 
 export default ItemDetailContainer
+

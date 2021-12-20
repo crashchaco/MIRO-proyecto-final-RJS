@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './../../../../../../proyectos/Proyecto_Final/app-proyecto/src/logo.png'
+import logo from './../../../src/logo.png'
 import {CartWidget} from '../CartWidget/CartWidget'
 import {Navbar,Nav,NavDropdown} from 'react-bootstrap'
 import './NavBar.css'

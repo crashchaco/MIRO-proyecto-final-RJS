@@ -7,6 +7,7 @@ import './ItemListContainer.css'
 export const ItemListContainer = ({greeting}) => {
     
   const [mensaje, setMensaje] = useState("Cargando...")
+
   const categories = [
     {id:'1', title:'APEX', description:'Juegos de pc', precio:'$20' },
     {id:'2', title:'COD 4', description:'Juegos de consolas', precio:'$30'},
@@ -63,6 +64,8 @@ export const ItemListContainer = ({greeting}) => {
       <h1>{greeting}</h1>
       <hr />
       <ItemCount stock={5} initial={0}/>
+      <hr />
+      <ItemList categories={categories}/>
     </div>
   )
 }

@@ -4,7 +4,7 @@ import {ItemList} from '../../helper/ItemList';
 import {useEffect,useState} from 'react';
 import './ItemListContainer.css'
 
-export const ItemListContainer = ({greeting}) => {
+export const ItemListContainer = () => {
     
   const [mensaje, setMensaje] = useState("Cargando...")
 
@@ -19,6 +19,7 @@ export const ItemListContainer = ({greeting}) => {
 
   useEffect(() => {
 
+    
 
     const promesa = new Promise((res,rej)=> {
      
@@ -59,9 +60,6 @@ export const ItemListContainer = ({greeting}) => {
       {productos.map((elemento,indice)=> {
         return <p>{elemento.title}</p>
       })}
-
-
-      <h1>{greeting}</h1>
       <hr />
       <ItemCount stock={5} initial={0}/>
       <hr />

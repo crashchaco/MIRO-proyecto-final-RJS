@@ -15,7 +15,7 @@ function App() {
 
       <HomeView>
 
-      <ItemListContainer greeting="Algun Saludo"/>
+      <ItemListContainer/>
     
 
       </HomeView>

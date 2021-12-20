@@ -14,7 +14,7 @@ export const ItemList = ({categories}) => {
 
   return (
     <ul>
-      {categories.map(product => <Item key={product.title} product={categories}/>)}
+      {categories.map(product => <Item key={product.id} product={product}/>)}
     </ul>
   )
 }

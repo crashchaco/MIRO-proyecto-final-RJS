@@ -1,6 +1,11 @@
 import React from 'react'
 import {NavBar} from '../NavBar/NavBar';
 import {Footer} from  '../Footer/Footer';
+import {Producto} from '../Productos/Producto'
+import {Productos} from '../Productos/Productos'
+import CheckoutPage from '../CheckoutPage/CheckoutPage'
+import CheckoutCard from '../CheckoutCard/CheckoutCard'
+import {BrowserRouter, Routes,Route,Link } from "react-router-dom";
 import './HomeView.css'
 
 
@@ -11,12 +16,17 @@ export const HomeView = ({children}) => {    //tambien puedo desestruturar diret
     return (
         
         <main id="main">
-            
-            <NavBar/>
+                <BrowserRouter>
+                    <NavBar/>
 
-            {children}
-            
-            <Footer/>
+                    <Routes>
+                        <Route path="/" element={<Productos/>} />
+                        <Route path="/checkout-page" element={<CheckoutPage/>} />
+                    </Routes>
+                    
+                    {children}
+                    <Footer/>
+                </BrowserRouter>
             
         </main>
     )

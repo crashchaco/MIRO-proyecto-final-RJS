@@ -1,0 +1,13 @@
+.mainTotal {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height:20vh;
+}
+
+.botonTotal {
+    margin-top: 1rem;
+    background-color:red;
+    border-radius: 10px;
+}

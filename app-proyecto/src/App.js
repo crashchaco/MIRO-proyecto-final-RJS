@@ -13,10 +13,10 @@ function App() {
 
     <>
 
-      <HomeView>
 
-      <ItemListContainer/>
-    
+      <HomeView>
+     
+          {/* <ItemListContainer/> */}
 
       </HomeView>
 

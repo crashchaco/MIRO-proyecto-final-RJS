@@ -9,6 +9,7 @@ export const ItemCount = ({stock, initial, onAdd}) => {
   
   const [contador=initial, setContador] = React.useState(initial);
 
+
   const Carrito = onAdd;
   const SwalError = withReactContent(Swal)
 
@@ -41,22 +42,20 @@ const agregarItem = () => {
 
 const restarItem = () => {
 
-  if (contador < stock && contador != 0) {
+  if (contador <= stock && contador != 0) {
     setContador(contador - 1)
   }
   else {
     SwalError.fire({
       icon: 'error',
       title: 'Oops...',
-      
-      
     })
   }
 }
 
 const agregarCarrito = () => {
 
-  if (contador == contador) {
+  if (contador > 0 && contador < 6) {
     onAdd = contador;
     Swal.fire({
       position: 'top-end',
@@ -67,9 +66,13 @@ const agregarCarrito = () => {
     })
   }
   else {
-    
+    SwalError.fire({
+      icon: 'error',
+      title: 'Oops...',
+    })
   }
-}
+  }
+
 
   return (
 

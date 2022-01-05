@@ -19,6 +19,7 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import accounting from 'accounting';
 import {useStateValue} from '../../helper/StateProvider'
 import { actionTypes } from '../../helper/Reducer';
+import './Productos.css';
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -39,8 +40,8 @@ export const Producto = ({producto : {id,name,price,image,description,rating,pro
     setExpanded(!expanded);
   };
 
-  const [state,dispatch]= useStateValue();
-  const {basket} = state;
+  const [{basket},dispatch]= useStateValue();
+ 
   const addToBasket = () => {
       dispatch({
           type: actionTypes.ADD_TO_BASKET,
@@ -57,7 +58,7 @@ export const Producto = ({producto : {id,name,price,image,description,rating,pro
   }
   
   return (
-<Card sx={{ maxWidth: 345 }}>
+<Card className="cardCss" sx={{ maxWidth: 345 }}>
       <CardHeader
         // avatar={
         //   <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -92,7 +93,7 @@ export const Producto = ({producto : {id,name,price,image,description,rating,pro
         {Array(rating)
         .fill()
         .map((_,i) => (
-          <p>&#11088;</p>
+          <p>&#x1F47D;</p>
         ))}
         <IconButton aria-label="share">
           <ShareIcon />

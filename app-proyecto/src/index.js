@@ -8,8 +8,9 @@ import reducer, {initialState} from './helper/Reducer'
 
 ReactDOM.render(
   <React.StrictMode>
-    <StateProvider initiaState={initialState} reducer={reducer}/>
+    <StateProvider initialState={initialState} reducer={reducer}>
     <App />
+    </StateProvider> 
   </React.StrictMode>,
   document.getElementById('root')
 );

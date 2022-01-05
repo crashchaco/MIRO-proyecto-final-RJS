@@ -2,9 +2,7 @@ import React from 'react'
 import './Footer.css'
 export const Footer = () => {
   return (
-    <footer id="footer">
-      Footer
-    </footer>
+    <footer id="footer"></footer>
   )
 }
 

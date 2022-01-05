@@ -1,4 +1,9 @@
 .carrito {
     margin-right:100px;
     font-size:50px;
+    color: white;
+}
+
+.carrito:hover {
+    color: #042C71;
 }

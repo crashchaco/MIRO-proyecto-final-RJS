@@ -3,7 +3,7 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background-color: black;
+    background-color: #1B1B1B;
     color: white;
 }
  
@@ -14,14 +14,24 @@
 #navegacion li{
     margin-left: 20px;
     list-style: none;
+    
 }
 
 #menu {
     display:flex;
 }
 
+.navbar-dark .navbar-nav .nav-link {
+    color:white;
+}
+
 .App-logo {
     margin-left: 2%;
+    margin: 10px;;
     width: 100px;
     height: 100px;
+}
+
+.badge{
+margin-right: 50px;
 }

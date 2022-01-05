@@ -3,30 +3,26 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import {Typography} from '@material-ui/core'
-// import {useStateValue} from "../stateProvider";
 import CheckoutCard from '../CheckoutCard/CheckoutCard'
 import Total from '../Total/Total'
 import productosDataPc from '../Productos/productosDataPc'
-// import {useStateValue} from '../../helper/StateProvider'
+import {useStateValue} from '../../helper/StateProvider'
 
-// const useStyle = makeStyle((theme) => ({
-//     root: {
-//         flexGrow: 1,
-//         padding: "2rem",
-//     },
-// }));
+
 
 export const CheckoutPage = () => {
 
-    // const classes = useStyle();
-    // const [{basket}, dispatch]= useStateValue();
+    
+    const [{basket},dispatch]= useStateValue();
+
+  
 
     function FormRow() {
         return (
             <>
             <Container fluid>
             <Row>
-            {productosDataPc.map((item)=>(
+            {basket?.map((item)=>(
             <Col xs={12} sm={12} md={12} lg={4}>
                 <CheckoutCard key={item.id} producto={item}/>
             </Col>
@@ -36,7 +32,7 @@ export const CheckoutPage = () => {
         </>
         )
     };
-
+    
   return (
     <>
         <Container fluid>

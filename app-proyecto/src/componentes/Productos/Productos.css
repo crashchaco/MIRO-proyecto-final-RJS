@@ -1,0 +1,14 @@
+.productoscss {
+    background-color:#F7F7FA;
+
+}
+
+.rowProductosCss {
+   width: 100%;
+   height: 100%;
+   margin-left:6%;
+}
+
+.cardCss {
+    margin: 5px;
+}

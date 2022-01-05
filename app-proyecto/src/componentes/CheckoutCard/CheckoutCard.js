@@ -8,6 +8,8 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import accounting from 'accounting';
 import DeleteIcon from '@mui/icons-material/Delete';
+import {useStateValue} from '../../helper/StateProvider';
+import { actionTypes } from '../../helper/Reducer';
 import { styled } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -23,8 +25,14 @@ import Avatar from '@mui/material/Avatar';
 
 export const CheckoutCard = ({producto : {id,name,price,image,description,rating,productType}}) => {
 
+  const [{basket},dispatch]= useStateValue();
   const [expanded, setExpanded] = React.useState(false);
   
+  const removeItem = () => dispatch({
+    type: actionTypes.REMOVE_ITEM,
+    id: id,
+  })
+
   return (
 <Card sx={{ maxWidth: 345 }}>
       <CardHeader
@@ -53,7 +61,7 @@ export const CheckoutCard = ({producto : {id,name,price,image,description,rating
         ))}
         </div>
         <IconButton>
-      <DeleteIcon fontSize="large"></DeleteIcon>
+      <DeleteIcon fontSize="large" onClick={removeItem}></DeleteIcon>
       </IconButton>
       </CardActions>
      

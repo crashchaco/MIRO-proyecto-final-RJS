@@ -35,3 +35,10 @@
 .badge{
 margin-right: 50px;
 }
+
+.btnlogg {
+    color: white;
+}
+.btnlogg:hover {
+    color: red;
+}

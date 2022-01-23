@@ -2,7 +2,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {HomeView} from './componentes/HomeView/HomeView';
-import {ItemListContainer} from './componentes/Container/ItemListContainer';
 import {useEffect,useState} from 'react';
 
 function App() {
@@ -14,11 +13,7 @@ function App() {
     <>
 
 
-      <HomeView>
-     
-          {/* <ItemListContainer/> */}
-
-      </HomeView>
+      <HomeView/>
 
     </>
 
